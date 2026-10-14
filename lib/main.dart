@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'profile_page.dart';
  
 void main() {
   runApp(const MaterialApp(home: MyPage()));
@@ -28,8 +29,13 @@ class _MyPageState extends State<MyPage> {
                 setState(() {
                   message = 'กดปุ่มแล้ว!';
                 });
+                Navigator.of(context).push(
+                  MaterialPageRoute<void>(
+                    builder: (context) => const ProfilePage(),
+                  ),
+                );
               },
-              child: const Text('Hello againl'),
+              child: const Text('press'),
             ),
           ],
         ),
